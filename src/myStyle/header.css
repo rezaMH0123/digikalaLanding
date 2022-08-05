@@ -1,0 +1,523 @@
+body{
+	margin:0;
+	padding:0;
+}
+#header{
+	border-bottom:1px solid #aaa;
+	background:url('../img/top.png') repeat-x;
+}
+#header > .top{
+	height:70%;
+	position:relative;
+}
+#header > .top > .holder > img{
+	width:130px;
+	margin:60px 0 0 0;
+}
+#header > .bottom{
+	border-top:1px solid #aaa;
+	height:30%;
+}
+#header > div > .holder{
+	height:100%;
+	width:1100px;
+	margin:0 auto;
+	border-left:1px solid #aaa;
+	border-right:1px solid #aaa;
+	position:relative;
+}
+#header > .top > .holder > .SearchBox{
+	position:absolute;
+	right:20px;
+	bottom:20px;
+	max-width:1100px;
+
+}
+#header > .top > .SearchBox > #checkClickSearch{
+	display:none;
+	position:absolute;
+	left:-100px;
+}
+#header > .top > .holder > .SearchBox > #checkClickSearch ~ .loch{
+	transition:0.5;
+	width:30px;
+	height:30px;
+	top:2px;
+	right:3px;
+	position:absolute;
+	z-index:100;
+	border-radius:2em;	
+	box-shadow:0 0 8px 1px #ffffffaa inset;
+	background-color: #6b0f1a;
+	background-image: linear-gradient(315deg, #6b0f1a 0%, #b91372 74%);
+}
+#header > .top > .holder > .SearchBox > #checkClickSearch ~ .loch:after{
+	transition:0.5;
+	position:absolute;
+	content:"";
+	border-radius:2em;	
+	width:100%;
+	height:100%;
+	top:0;
+	right:0;
+	background:url('../img/SearchIcon.png') no-repeat;
+	background-position:50%;
+	background-size:15px;
+}
+#header > .top > .holder .SearchBox > #checkClickSearch ~ .boxbigSearch > input{
+	transition:0.5s;
+	width:34px;
+	height:30px;
+	background:green;
+	top:0;
+	right:0;	
+	position:absolute;
+	border-radius:2em;
+	box-shadow:0;
+	color:white;
+	border:1px solid #55555555;
+	background-color: #7f5a83;
+	background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
+}
+#header > .top > .holder .SearchBox > #checkClickSearch ~ .boxbigSearch > input::placeholder{
+	transition:0.8s;
+	visibility:hidden;
+	opacity:0;
+	color:white;
+	//text-align:right;
+}
+#header > .top > .holder .SearchBox > #checkClickSearch:checked ~ .boxbigSearch > input::placeholder{
+	transition-delay:0.3s;
+	visibility:visible;
+	opacity:1;
+}
+#header > .top > .holder .SearchBox > #checkClickSearch:checked ~ .boxbigSearch > input{
+	width:600px;
+	padding-right:38px;
+	padding-left:20px;
+}
+#header > .top > .holder .SearchBox > #checkClickSearch:checked ~ .boxbigSearch > input:focus {outline: 0;}
+#menu{
+	position:relative;
+	direction:rtl;
+	height:40px;
+	line-height:40px;
+	color:#555;
+	font-family:yek;
+	position:relative;
+}
+
+#menu  li:hover{
+	color:red;
+	background:url('../img/up.png') no-repeat 15% 50%;
+	border-bottom:3px solid red;
+}	
+#menu  li{
+	background:url('../img/down.png') no-repeat 15% 50%;
+	float:right;
+	padding:0 7px 0 35px;
+	cursor:pointer;
+	height:40px;
+}
+#menu > li:hover > ul{
+	display:block;
+}
+#menu > li > ul{
+	position:absolute;
+	width:100%;
+	top:43px;
+	right:-1px;
+	background:white;	
+	border:1px solid #aaa;
+	display:none;
+	height:43px;
+
+}
+#menu > li > ul > li:hover > ul{
+	display:block;
+}
+#menu > li > ul > li:hover{
+	color:red;
+	border-bottom:3px solid red;
+
+}
+#menu > li > ul > li{
+	color:#555;
+	float:right;
+	padding:0 40px;
+}
+#menu > li > ul > li > ul{
+	position:absolute;
+	width:100%;
+	height:280px;
+	top:43px;
+	right:-1px;
+	background:white;
+	z-index:20;
+	border:1px solid #aaa;
+	display:none;
+}
+
+	#menu.mob{
+		position:fixed;
+		top:0;
+		right:50%;
+		margin-right:-400px;
+		color:white;
+		background:rgba(0,0,0,0.6);
+		z-index:20;
+	}
+	#menu.mob > li{
+		background:none;
+		padding:0 25px;
+	}
+	#menu.mob > li:hover{
+		background:white;
+		color:red;
+		border-color:white;
+	}
+	#menu > li > div{
+		display:none;
+		color:black;
+	}
+	#menu > li > div{
+		display:none;
+	}
+	#menu > li > ul > li> div{
+		display:none;
+	}
+/* Mobile and tabled mode */
+#header > .bottom > .buttonM{		
+	width:0;
+	height:0;
+	display:inline-block;
+	position:absolute;
+	left:5px;
+	margin:4px 0 0 20px;
+	border-radius:0.5em;
+	line-height:0;
+}
+@media screen and (max-width:1120px){
+	#header > div > .holder {
+		width:100%;
+	}
+}
+@media screen and (max-width:850px){
+	#header > .bottom > .buttonM{
+		transition:0.5s;
+		padding:15px;
+		border:1px solid transparent;
+		margin:4px 0 0 5px;
+		left:4px;
+		text-indent:-5px;
+		cursor:pointer;
+		background:url('../img/MnuIconMoblieMode.png') no-repeat 50%;
+		background-size:20px;
+		box-shadow:0 0 10px 1px #ddd;
+		z-index:1000px;
+	}
+	#menu{
+		position:absolute;
+		padding:0 20px;
+		top:0;
+		left:45px;
+		direction:ltr;
+		color:#555;
+		font-family:yek;
+		line-height:15px;
+		margin:1px solid transparent;
+		z-index:100;
+	}
+	#menu::after{
+		transition:0.2s;
+		content:"";
+		position:absolute;
+		top:5px;
+		left:-35px;
+		padding:15px;
+		position: absolute;
+		border-radius:0.5em;
+		background:url('../img/MnuIconMoblieMode.png') no-repeat 50% orange;
+		background-size:20px;
+		transform:rotate(0deg);
+		cursor:pointer;
+	}
+	#menu:hover::after{
+		transform:rotate(360deg);
+		box-shadow:0 0 5px 1px #ff811199;
+	}
+	#menu  li{
+		float:none;
+		padding:5px;
+		cursor:pointer;
+		content:"";
+		height:30px;
+		margin:0;
+		position:relative;
+	}
+	#menu  li::before{
+		position:absolute;
+		content:"";
+		height:100%;
+		width:2px;
+		left:-19px;
+		background:#4dbeff;
+		box-shadow:0 0 4px 1px #4dbeff77;
+		margin-top:15px;
+		top:0;
+		z-index:15px;
+	}
+	#menu  li:last-child::before{
+		height:0;
+	}
+	#menu  li:hover::after{
+		background:#8bffe9;
+		box-shadow:0 0 5px 1px #4bffe0;
+	}
+	#menu  li::after{
+		transition:0.3s;
+		content:"";
+		width:10px;
+		height:10px;
+		background:white;
+		border-radius:0.2em;
+		background:white;
+		position:absolute;
+		left:-23px;
+		z-index:10px;
+		top:10px;
+	}
+	#menu  li > div::before{
+		content:"";
+		height:2px;
+		width:20px;
+		position:absolute;
+		top:15px;
+		left:-17px;
+		background:#4dbeff;
+	}
+	#menu  li > div::after{
+		transition:0.2s;
+		content:"";
+		height:2px;
+		width:0;
+		position:absolute;
+		top:15px;
+		left:-17px;
+		background:#4bffe077;
+		box-shadow:0 0 2px 1px #4bffe077;
+	}
+	#menu  li:hover > div::after{
+		width:20px;
+	}
+	#menu > li > div{
+		display:block;
+	}
+	#menu > li > ul > li> div{
+		display:block;
+	}
+	#menu  li >div > img{
+		transition:0.1s;
+		width:24px;
+		height:24px;
+		padding:3px;
+		border-radius:0.3em;
+		background-color: #0abcf9;
+		background-image: linear-gradient(315deg, #0abcf9 0%, #2c69d1 74%);
+		background-color: #4d5dfb;
+		background-image: linear-gradient(315deg, #4d5dfb 0%, #08c8f6 74%);
+	}
+	#menu  li > div > img:hover {
+		transition-delay:0.8s;
+		transition:1s;
+		box-shadow:0 0 10px 1px #08c8f6;	
+	}
+	#menu  li > div + span{
+		transition:0.3s;
+		visibility:hidden;
+		opacity:0;
+		position:absolute;
+		top:-30px;
+		left:30px;
+		padding:8px 12px;
+		width:max-content;
+		height:max-content;
+		background:rgba(0,0,0,1);
+		border-radius:0.3em;
+		z-index:200px;
+		color:white;
+		box-shadow:0;
+	}
+
+	#menu > li > div + span::before{
+		position:absolute;
+		content:"";
+		left:-8px;
+		bottom:0px;
+		border-top:10px solid transparent;
+		border-right:10px solid transparent;
+		border-left:10px solid transparent;
+		border-bottom:10px solid rgba(0,0,0,1);	
+	}
+	#menu > li > ul > li > div + span::before{
+		right:-10px;
+		position:absolute;
+		bottom:0;
+		content:"";
+		border-top:10px solid transparent;
+		border-right:10px solid transparent;
+		border-left:10px solid transparent;
+		border-bottom:10px solid transparent;
+	}
+	#menu  li:hover > div + span{
+		visibility:visible;
+		opacity:1;
+	}
+	#menu > li > ul> li > ul{
+		transition:0.3s;
+		visibility:hidden;
+		opacity:0;
+		position:relative;
+		width:510px;
+		height:300px;
+		background:white;
+		padding:0 20px;
+		display:block;
+		left:30px;	
+		top:0px;
+		direction:ltr;
+		color:#555;
+		font-family:yek;
+		margin:1px solid transparent;
+		z-index:100;	
+		border:1px solid #999;
+	}
+	#menu > li > ul> li:hover > ul{
+		visibility:visible;
+		opacity:1;
+		top:-10px;	
+	}
+	#menu > li > ul > li > div + span{
+		left:32px;	
+		top:6px;
+		z-index:200;
+		padding:6px 20px;
+		border-radius:0.8em 0.8em 0 0;
+		border:1px solid #999;
+		border-bottom:3px solid transparent;
+		background:white;
+		color:black;
+	}
+	#menu > li > ul > li:hover > div + span{
+		top:-4px;
+	}
+	#menu > li:hover{
+		//color:red;
+		border-bottom:0;
+	}
+	#menu > li > ul{
+		position:absolute;
+		transition:0.3s;
+		visibility:hidden;
+		opacity:0;
+		display:block;
+		height:max-content;
+		padding:0 20px;
+		top:5px;
+		left:60px;
+		direction:ltr;
+		color:#555;
+		font-family:yek;
+		margin:1px solid transparent;
+		z-index:100;
+		background:none;
+		border:0;
+		padding-right:40px;
+	}
+	#menu > li:hover > ul{
+		visibility:visible;
+		opacity:1;
+		left:35px;
+	}
+	#menu > li> ul> li:hover{
+		//color:red;
+		border-bottom:0;
+	}
+	#menu > li > ul> li{
+		float:none;
+		padding:2px;
+		cursor:pointer;
+		content:"";
+		height:30px;
+		margin:0;
+		position:relative;
+	}
+	#menu > li > ul> li > ul > li::after{display:none;}
+	#menu > li > ul> li > ul > li::before{display:none;}
+	/* active*/
+
+	#header > .bottom > .buttonM ~ .holder > #menu{
+		transition:0.2s;
+		opacity:0;
+		visibility:hidden;
+	}
+	#header{
+		width:700px;
+		margin:0 auto;
+	}
+	
+	#header > .bottom >.buttonM:active ~ .holder > #menu{
+		opacity:1;
+		visibility:visible;
+	}
+	#header > .bottom > .buttonM ~ .holder > #menu:hover{
+		opacity:1;
+		visibility:visible;
+	}
+	#header > .bottom {
+		height:40px;
+	}
+	#header > .bottom > .holder{
+		position:absolute;
+		z-index:10px;
+		background:red;
+		width:0;
+		left:0;
+	}
+	#header > .top > .holder{
+		height:132px;
+	}
+	#header > .bottom{
+		border-top:1px solid #aaa;
+		border-right:1px solid #aaa;
+		border-left:1px solid #aaa;
+		position:none;
+		position:relative;
+		width:100%;
+	}
+	#header > .bottom > .holder{
+		position:absolute;	
+		width:1px;
+		left:-1px;
+		border:0;
+		background:none;
+	}
+	#header > .top > .holder > .SearchBox{
+		position:absolute;
+		bottom:-25px;
+		right:0;
+	}
+	#header > .top > .holder .SearchBox > #checkClickSearch:checked ~ .boxbigSearch > input{
+		width:390px;
+	}
+	#header > .top > .holder > img{
+		//height:80px;
+		//width:150px;
+		position:absolute;
+		left:50%;
+		margin-left:-65px;
+		margin-top:80px;
+	}
+}
+
+

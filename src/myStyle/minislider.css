@@ -1,0 +1,70 @@
+.slider {
+	position:relative;
+	height:100%;
+	overflow:hidden;
+}
+.slider > .moveBox {
+	transition:0.5s;
+	position:relative;
+	//border:1px solid red;
+	width:500%;
+	height:100%;
+	left:0;
+}
+.slider > .moveBox > .items {
+	position:relative;
+	float:left;
+	width:164px;
+	height:100%;
+	text-align:center;
+	direction:rtl;
+	user-select:none;
+}
+.slider > .moveBox > .items > img {
+	width:70%;
+	height:auto;
+}
+.slider > .moveBox > .items > h2 {
+	font-size:17px;
+	color:#555;
+	margin:10px;
+	padding-bottom:10px;
+	border-bottom:10px solid #eee;
+	font-weight:500px;
+}
+.slider > .moveBox > .items > span {
+	font-size:15px;
+	color:green;
+}
+.slider > .header {
+	height:40px;
+	background:rgb(247,247,247);
+	direction:rtl;
+	text-indent:20px;
+	line-height:40px;
+	color:green;
+	margin-bottom:10px;
+}
+
+.slider > .itm {
+	width:40px;
+	height:120px;
+	position:absolute;
+	top:60px;
+	cursor:pointer;
+}
+
+.slider > .btnright {
+	transition:0.5s;
+	background:url("../img/slider1/right.png") rgba(255,255,255,0.7) no-repeat 50%;
+	background-size:70%;
+	right:0;
+
+}
+.slider > .btnleft {
+	transition:0.5s;
+	background:url("../img/slider1/left.png")  rgba(255,255,255,0.7) no-repeat 50%;
+	background-size:70%;
+	left:0;
+	border-right:1px solid gray;
+}

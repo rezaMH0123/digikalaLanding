@@ -1,0 +1,92 @@
+#slider {
+	position:relative;
+	height:100%;
+	overflow:hidden;
+	z-index:0;
+
+}
+#slider > #gal {
+	transition:0.5s;
+	position:relative;
+	//border:1px solid red;
+	width:500%;
+	height:100%;
+	left:0;
+}
+#slider > #gal > .items {
+	position:relative;
+	float:left;
+	width:20%;
+	height:100%;
+}
+
+#slider > #gal > .items > img {
+	width:100%;
+	height:100%;
+}
+#slider > #gal > .items > p {
+	transition:0.5s;
+	position:relative;
+	margin:0;
+	padding:10px;
+	text-align:center;
+	font-family:tahoma;
+	color:white;
+	background:rgba(0,0,0,0.6);
+}
+#slider > .itm {
+	width:50px;
+	height:70px;
+	position:absolute;
+	top:80px;
+	cursor:pointer;
+}
+
+#slider > #right {
+	transition:0.5s;
+	background:url("../img/slider/right.png")  no-repeat 50%;
+	background-size:70%;
+	right:-100px;
+
+}
+#slider > #left {
+	transition:0.5s;
+	background:url("../img/slider/left.png")  no-repeat 50%;
+	background-size:70%;
+	left:-100px;
+}
+#slider:hover > #right {
+	right:0;
+}
+#slider:hover > #left {
+	left:0;
+}
+#slider:hover > #gal > .items > p {
+	margin-top:-45px;
+}
+ul{
+	padding:0;
+	margin:0;
+	list-style:none;
+}
+#slider > .itemsSliderbox{
+	width:100%;
+	background:rgba(0,0,0,0.7);
+	height:40px;
+	color:white;
+	line-height:40px;
+	cursor:pointer;
+	position:absolute;
+	bottom:0;
+	font-family:roya;
+
+}
+#slider > .itemsSliderbox > li{
+	float:left;
+	width:20%;
+	text-align:center;
+}
+#slider > .itemsSliderbox > li:hover{
+	background:white;
+	color:black;
+}
